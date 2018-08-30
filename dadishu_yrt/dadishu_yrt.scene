@@ -1,0 +1,115 @@
+scene
+{
+    path = dadishu_yrt.gpb
+
+    showDefaultLight = false
+    ambientColor = 1.0, 1.0, 1.0
+
+    modelSize = 17
+    // modelSize = 20
+    modelScale = 1.0
+
+
+    node main
+    {
+    }
+    // 游戏主页背景
+    node pPlane_bg02
+    {
+    }
+    node pPlane_jiachang
+    {
+    }
+
+    // 地鼠 mouse
+    node mouse
+    {
+    }
+    node dishu1
+    {
+    }
+    node dishu2
+    {
+    }
+    node dishu3
+    {
+    }
+    node dishu4
+    {
+    }
+    node dishu5
+    {
+    }
+    node dishu6
+    {
+    }
+    node dishu7
+    {
+    }
+    node dishu8
+    {
+    }
+    node dishu9
+    {
+    }
+
+    // 开始页 start
+    node start
+    {
+    }
+    node pPlane_bg01
+    {
+    }
+    node pPlane_kaishi
+    {
+    }
+
+    // 结束页 end
+    node end
+    {
+    }
+    node pPlane_bg03
+    {
+    }
+    node pPlane_jiangli
+    {
+    }
+    node pPlane_zaiwan
+    {
+    }
+    node pPlane03_defen02
+    {
+    }
+    node pPlane03_defen03
+    {
+    }
+
+    // 倒计时 time
+    node time
+    {
+    }
+    // node dibian
+    // {
+    // }
+    node dise
+    {
+    }
+    node huakuai
+    {
+    }
+    node jindu
+    {
+    }
+
+    // 得分 value
+    node value
+    {
+    }
+    node pPlane02_defen01
+    {
+    }
+    node pPlane02_defen02
+    {
+    }
+
+}

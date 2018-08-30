@@ -1,0 +1,8 @@
+{
+    "track.mode": "0",
+    "animation.autostart": "0",
+    "gesture.rotatable": "0",
+    "gesture.draggable": "0",
+    "gesture.scalable": "0",
+    "ui.recording": "0"
+}

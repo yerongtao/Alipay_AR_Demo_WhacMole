@@ -1,0 +1,613 @@
+material textured
+{
+    sampler u_diffuseTexture
+    {
+        mipmap = false
+        wrapS = CLAMP
+        wrapT = CLAMP
+        minFilter = LINEAR
+        magFilter = LINEAR
+    }
+
+    technique
+    {
+        pass 
+        {
+            vertexShader = shaders/textured.vert
+            fragmentShader = shaders/textured.frag
+
+            u_inverseTransposeWorldViewMatrix = INVERSE_TRANSPOSE_WORLD_VIEW_MATRIX
+            u_worldViewProjectionMatrix = WORLD_VIEW_PROJECTION_MATRIX
+            
+            renderState
+            {
+                blend = false
+                blendDst = ONE_MINUS_SRC_ALPHA
+                blendSrc = SRC_ALPHA
+                cullFace = true
+                cullFaceSide = BACK
+                depthTest = true
+            }
+            
+        }
+    }
+}
+
+material bg01 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/begin/begin_0.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material bg03 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/yemian_03.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material bg03defen02 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/num/num_0.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+            defines = TEXTURE_DISCARD_ALPHA;DISCARD_ALPHA 0.5
+        }
+    }
+}
+
+material bg03defen1 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/num/num_0.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+            defines = TEXTURE_DISCARD_ALPHA;DISCARD_ALPHA 0.5
+        }
+    }
+}
+
+material bg2 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/bg2.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+            defines = TEXTURE_DISCARD_ALPHA;DISCARD_ALPHA 0.5
+        }
+    }
+}
+
+material dadishu_kaishi : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/start.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dadishu_number_x : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/number/number_0.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dadishu_number_xx : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/number/number_0.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dadishu_zaiwan : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/replay.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dise01 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/time_01.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu01 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu02 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu03 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu04 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu05 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu06 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu07 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu08 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material dishu09 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/mouse.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material huakuai1 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/time_03.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material ipx : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/jiachang.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material jiangli : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/about.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material jindu01 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = dadishu_yrt.fbm/time_02.png
+    }
+
+    renderState
+	{
+	   blend = true
+	   blendSrc = SRC_ALPHA
+	   blendDst = ONE_MINUS_SRC_ALPHA
+	   alphaBlendDst = ONE
+	   alphaBlendSrc = ONE
+	}
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
